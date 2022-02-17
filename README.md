@@ -183,7 +183,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Davidia - d.costantini.stcerello@egmail.com
+Davidia - d.costantini.stcerello@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
