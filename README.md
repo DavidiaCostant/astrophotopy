@@ -136,7 +136,7 @@ After installing dependencies, you can install the library with pip:
 ```
 4. After prior calculation of total exposure and creation of integration sets, integration of the set can be performed:
 ```python
-   crab.create_integrations_sets()
+   crab.create_integration_sets()
    crab.integrate_over_sets()
 
 ```
