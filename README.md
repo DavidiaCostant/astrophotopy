@@ -123,9 +123,10 @@ After installing dependencies, you can install the library with pip:
    crab = ap.Project(subject="M1", path="My_folder", telescope = my_tele, observation_site = my_site)
 
 ```
-2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them:
+2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them and then perform set cleaning by means of master dark and flat frame subtraction:
 ```python
    crab.load()
+   crab.subtract_master_dark_and_flat()
 
 ```
 3. Now perform an automatic selection of the best images and then align the retained frames:
@@ -150,9 +151,9 @@ _For a better description of the above (and others) astrophotopy methods, please
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
+- [ ] Add Changelog
 - [ ] Write documentation
-- [ ] Add Additional Templates w/ Examples
+- [ ] Add Additional Examples
 
 
 See the [open issues](https://github.com/pypa/astrophotopy/issues) for a full list of proposed features (and known issues).
