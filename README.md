@@ -51,7 +51,7 @@ Astrophotography post processing tools
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Once I approached astrophotography some months ago, I searched for a tool grouping all my needs in term of image processing workflow. Much of that instruments are counterintuitive and/or platform/OS restricted (and not less important not free). 
+Once I approached astrophotography several months ago, I searched for a tool grouping all my needs in term of image processing workflow. Much of that instruments are counterintuitive and/or platform/OS restricted (and not less important not free). 
 So I wrote this simple library including all I need at the moment for a flexible processing workflow.\
 Remember that the AstroPhotoPy library can only be used inside a Jupiter / IPython notebook. 
 I hope you'll enjoy it!
