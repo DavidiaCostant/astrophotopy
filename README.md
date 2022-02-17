@@ -135,7 +135,7 @@ After installing dependencies, you can install the library with pip:
    crab.align_frames("normal", transform = "euclidean")
 
 ```
-4. After prior calculation of total exposure and creation of integration sets, integration of the set can be performed:
+4. After prior calculation of total exposure and creation of integration sets, sets' integration can be performed:
 ```python
    crab.create_integration_sets()
    crab.integrate_over_sets()
