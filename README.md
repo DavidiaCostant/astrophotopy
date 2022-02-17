@@ -8,7 +8,7 @@ Astrophotography post processing tools
 <br />
 <div align="center">
     
-  <a href="https://pypi.org/project/astrophotopy">
+  <a href="https://github.com/DavidiaCostant/astrophotopy/edit/main/crab.jpg">
     <img src="images/crab.jpg" alt="Logo" width="100" height="100">
   </a>
   <h2 align="center">AstroPhotoPy</h2>
