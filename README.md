@@ -40,7 +40,7 @@ Astrophotography post processing tools
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#Simple usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -114,7 +114,7 @@ After installing dependencies, you can install the library with pip:
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Simple usage
 1. Import the library, you can create a telescope and an observation site first then you have to create your project:
  ```python
    import astrophotopy as ap 
