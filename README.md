@@ -84,22 +84,22 @@ To install the things you need first:
 
 * numpy
   ```sh
-  python3 -m pip install numpy
+  pip install numpy
   ```
 * matplotlib
   ```sh
-  python3 -m pip install matplotlib
+  pip install matplotlib
 * opencv
   ```sh
-  python3 -m pip install opencv-python
+  pip install opencv-python
   ```
 * skimage
   ```sh
-  python3 -m pip install -U scikit-image
+  pip install -U scikit-image
   ```
 * IPython
   ```sh
-  python3 -m pip install ipython
+  pip install ipython
   ```
 ### Installation
 
