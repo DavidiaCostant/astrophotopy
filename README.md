@@ -120,7 +120,7 @@ After installing dependencies, you can install the library with pip:
    import astrophotopy as ap 
    my_tele = ap.Telescope(model="RC 8", diameter = 203, f_len = 1604, f_len_ep = 22, px_dim = 2.9, sens_diag = 23)
    my_site = ap.Observation_Site(location_name = "Tre cime di Lavaredo", altitude = 2320, latitude = 46.6, air_temp = -5.5, fwhm = 1)
-   crab = ap.Project(subject="M1", path="Cartella_prova", telescope = my_tele, observation_site = my_site)
+   crab = ap.Project(subject="M1", path="My_folder", telescope = my_tele, observation_site = my_site)
 
 ```
 2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them:
