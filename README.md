@@ -158,7 +158,7 @@ _For a better description of the above (and others) astrophotopy methods, please
 - [ ] Add additional examples
 
 
-See the [open issues](https://github.com/pypa/astrophotopy/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/DavidiaCostant/astrophotopy/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
