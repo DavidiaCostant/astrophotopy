@@ -154,8 +154,8 @@ _For a better description of the above (and others) astrophotopy methods, please
 - [ ] Add Changelog
 - [ ] Write documentation
 - [ ] Add fits and ser file compatibility
-- [ ] Monochromatic camera workflow
-- [ ] Add Additional Examples
+- [ ] Add monochromatic camera workflow
+- [ ] Add additional examples
 
 
 See the [open issues](https://github.com/pypa/astrophotopy/issues) for a full list of proposed features (and known issues).
