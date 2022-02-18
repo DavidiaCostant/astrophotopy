@@ -75,8 +75,8 @@ This library is based essentially on two image processing libraries and a front-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running, follow these simple steps.
+This is an example of how you can setting up your project locally.
+To get a local copy up and running, follow these simple steps:
 
 ### Prerequisites
 
