@@ -153,6 +153,8 @@ _For a better description of the above (and others) astrophotopy methods, please
 
 - [ ] Add Changelog
 - [ ] Write documentation
+- [ ] Add fits and ser file compatibility
+- [ ] Monochromatic camera workflow
 - [ ] Add Additional Examples
 
 
