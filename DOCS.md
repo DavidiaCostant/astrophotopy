@@ -13,7 +13,7 @@
           </ul>
       </ul>
       <ul>
-        <li><a href="#FlexIm">FlexIm object</a></li>
+        <li><a href="#FlexIm-object">FlexIm object</a></li>
           <ul>
             <li><a href="#Methods">Methods</a></li>
           </ul>
@@ -66,17 +66,17 @@ class Image:
         self.dev = None 
 ```
 ## Methods
-all the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
+All the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
 
 * load
 ```python
-def load(self, path, filename)
+def load(self, path, filename):
 ```
 It loads from a given filename within a path the image data.
 
 * histogram
 ```python
-def histogram(self)
+def histogram(self):
 ```
 It calculates the vector of luminance and its norm then updates the respective fields.
 
@@ -88,43 +88,43 @@ It saves to a file in the given path a plot of the luminance vector, with the (o
 
 * save
 ```python 
-def save(self, path)
+def save(self, path):
 ```
 It saves the image data to a image file.
 
 * yuv_decompose
 ```python 
-def yuv_decompose(self)
+def yuv_decompose(self):
 ```
 It transforms the RGB space of the object to YUV space.
 
 * yuv_recompose
 ```python 
-def yuv_recompose(self)
+def yuv_recompose(self):
 ```
 It transforms the YUV space of the object to RGB space.
 
 * conv2d
 ```python     
-def conv2d(self, kernel)
+def conv2d(self, kernel):
 ``` 
-It convolves the object with the given kernel
+It convolves the object with the given np.array(kernel)
 
 * blur
 ```python     
-def blur(self, width)
+def blur(self, width):
 ``` 
 It applies a blurring of magnitude int(width)                                                                                                  
 
 * sharpen 
 ```python   
-def sharpen(self)                                                                                          
+def sharpen(self):                                                                                          
 ```  
 It rapplies sharpness to the image
 
 * edge
 ```python 
-def edge(self)                                                                                             
+def edge(self):                                                                                             
 ```
 It extract edge detection from the previous image
 
@@ -132,18 +132,24 @@ It extract edge detection from the previous image
 ```python 
 def resize(self, factor):
 ```
-It scales the image of the given float(factor).
+It scales the image of the given float(factor), using a equal area method for downscaling and bicubic for upscaling.
 
 * show
 ```python
-def show(self)
+def show(self):
 ```
-It shows the image
+It shows the image.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+# FlexIm object
+The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic workflow).
 
-
-
-
+```python
+def __init__(self, *name):
+        self.name = ""
+        if name:
+            self.name = name
+        self.container = []
+```
 <p align="right">(<a href="#top">back to top</a>)</p>
