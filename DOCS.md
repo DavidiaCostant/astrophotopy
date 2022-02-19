@@ -7,15 +7,15 @@
     <li>
       <a href="#Object types">Object types</a>
       <ul>
-        <li><a href="#astrophotopy\.Image-object">Image object</a></li>
+        <li><a href="#Image-object">Image object</a></li>
           <ul>
-            <li><a href="#astrophotopy\.Image-methods">Methods</a></li>
+            <li><a href="#Image-methods">Methods</a></li>
           </ul>
       </ul>
       <ul>
-        <li><a href="#astrophotopy\.FlexIm-object">FlexIm object</a></li>
+        <li><a href="#FlexIm-object">FlexIm object</a></li>
           <ul>
-            <li><a href="#astrophotopy\.FlexIm-methods">Methods</a></li>
+            <li><a href="#FlexIm-methods">Methods</a></li>
           </ul>
       </ul>
       <ul>
@@ -47,7 +47,7 @@
 
 <!-- OBJECT TYPES -->
 # Object types
-# astrophotopy.Image object
+# Image object
 The Image type is a container for a single image data and additional field for properties as:
 
 * hist: the histogram of image's luminance as a vector
@@ -65,7 +65,7 @@ class Image:
         self.norm = None
         self.dev = None 
 ```
-## astrophotopy.Image Methods
+## Image Methods
 All the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
 
 * load
@@ -142,7 +142,7 @@ shows the image.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-# astrophotopy.FlexIm object
+# FlexIm object
 The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic workflow). 
 
 ```python
@@ -155,7 +155,7 @@ class FlexIm:
 ```
 The self.container is a list of astrophotopy.Image objects.
 
-## astrophotopy.FlexIm Methods
+## FlexIm Methods
 
 * avg
 ```python
