@@ -7,7 +7,7 @@
     <li>
       <a href="#Object types">Object types</a>
       <ul>
-        <li><a href="#Image object">Image object</a></li>
+        <li><a href="#Image-object">Image object</a></li>
       </ul>
       <ul>
         <li><a href="#FlexIm">FlexIm object</a></li>
