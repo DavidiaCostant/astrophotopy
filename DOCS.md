@@ -156,7 +156,6 @@ class FlexIm:
 The self.container is a list of astrophotopy.Image objects.
 
 ## Methods
-Some of the methods below can be destructive, they apply to the object by overwriting the previous information in case they do not returns any kind of object.
 
 * avg
 ```python
