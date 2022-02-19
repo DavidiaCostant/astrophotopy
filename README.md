@@ -142,7 +142,7 @@ After installing dependencies, you can install the library with pip:
 
 ```
  
-_For a better description of the above (and others) astrophotopy methods, please refer to the [Documentation](https://example.com)_
+_For a better description of the above (and others) astrophotopy methods, please refer to the [Documentation](https://github.com/DavidiaCostant/astrophotopy/blob/main/DOCS.md)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
