@@ -1,4 +1,4 @@
-# AstroPhotoPy library documentation
+# AstroPhotoPy library documentation (UNDER CONSTRUCTION)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -36,7 +36,7 @@
 </details>
 
 <!-- OBJECT TYPES -->
-## Object types
+### Object types
 
 Once I approached astrophotography several months ago, I searched for a tool grouping all my needs in term of image processing workflow. Much of those instruments are counterintuitive and/or platform/OS restricted (and not less important not free). 
 So I wrote this simple library including all I need at the moment for a flexible processing workflow.\
@@ -46,11 +46,11 @@ I hope you'll enjoy it!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Image object
+## Image object
 The Image type is a container for a single image data and additional field for properties as:
 
 * hist: the vector of values of luminance
-* norm: the norm(squared) of hist vector
+* norm: the norm(squared) of "hist" vector
 * dev: the deviation of the image's norm within a set of images
 
 ```python
@@ -64,7 +64,80 @@ class Image:
         self.norm = None
         self.dev = None 
 ```
+# Image object's methods
+all the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
 
+* load
+```python
+def load(self, path, filename)
+```
+It loads from a given filename within a path the image data.
+
+* histogram
+```python
+def histogram(self)
+```
+It calculates the vector of luminance and its norm then updates the respective fields.
+
+* export_hist
+```python        
+def export_hist(self, path, *dpi):
+```
+It saves to a file in the given path a plot of the luminance vector, with the (optional) resolution in dpi.
+
+* save
+```python 
+save(self, path)
+```
+It saves the image data to a image file.
+
+* yuv_decompose
+```python 
+def yuv_decompose(self)
+```
+It transforms the RGB space of the object to YUV space.
+
+* yuv_recompose
+```python 
+def yuv_recompose(self)
+```
+It transforms the YUV space of the object to RGB space.
+
+* conv2d
+```python     
+    def conv2d(self, kernel)
+``` 
+It convolves the object with the given kernel
+
+* blur
+```python     
+    def blur(self, width)
+``` 
+It applies a blurring of magnitude int(width)                                                                                                  
+
+* sharpen 
+```python   
+def sharpen(self)                                                                                          
+```  
+It rapplies sharpness to the image
+
+* edge
+```python 
+edge(self)                                                                                             
+```
+It extract edge detection from the previous image
+
+* resize
+```python 
+def resize(self, factor):
+```
+It scales the image of the given float(factor).
+
+* show
+```python
+def show(self)
+```
+It shows the image
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -111,32 +184,7 @@ After installing dependencies, you can install the library with pip:
 
 
 
-<!-- USAGE EXAMPLES -->
-## Simple usage
-1. Import the library, you can create a telescope and an observation site first then you have to create your project:
- ```python
-   import astrophotopy as ap 
-   my_tele = ap.Telescope(model="RC 8", diameter = 203, f_len = 1604, f_len_ep = 22, px_dim = 2.9, sens_diag = 23)
-   my_site = ap.Observation_Site(location_name = "Tre cime di Lavaredo", altitude = 2320, latitude = 46.6, air_temp = -5.5, fwhm = 1)
-   crab = ap.Project(subject="M1", path="My_folder", telescope = my_tele, observation_site = my_site)
 
-```
-2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them and then perform set cleaning by means of master dark and flat frame subtraction:
-```python
-   crab.load()
-   crab.subtract_master_dark_and_flat()
-
-```
-3. Now perform an automatic selection of the best images and then align the retained frames:
-```python
-   crab.show_select_and_drop()
-   crab.align_frames("normal", transform = "euclidean")
-
-```
-4. After prior calculation of total exposure and creation of integration sets, sets' integration can be performed:
-```python
-   crab.create_integration_sets()
-   crab.integrate_over_sets()
 
 ```
  
