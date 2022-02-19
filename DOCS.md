@@ -7,15 +7,15 @@
     <li>
       <a href="#Object types">Object types</a>
       <ul>
-        <li><a href="#astrophotopy.Image-object">Image object</a></li>
+        <li><a href="#astrophotopy\.Image-object">Image object</a></li>
           <ul>
-            <li><a href="#astrophotopy.Image-methods">Methods</a></li>
+            <li><a href="#astrophotopy\.Image-methods">Methods</a></li>
           </ul>
       </ul>
       <ul>
-        <li><a href="#astrophotopy.FlexIm-object">FlexIm object</a></li>
+        <li><a href="#astrophotopy\.FlexIm-object">FlexIm object</a></li>
           <ul>
-            <li><a href="#astrophotopy.FlexIm-methods">Methods</a></li>
+            <li><a href="#astrophotopy\.FlexIm-methods">Methods</a></li>
           </ul>
       </ul>
       <ul>
