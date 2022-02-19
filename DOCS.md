@@ -8,6 +8,8 @@
       <a href="#Object types">Object types</a>
       <ul>
         <li><a href="#Image-object">Image object</a></li>
+          <ul>
+            <li><a href="#Methods">Methods</a></li>
       </ul>
       <ul>
         <li><a href="#FlexIm">FlexIm object</a></li>
@@ -35,17 +37,9 @@
   </ol>
 </details>
 
+
 <!-- OBJECT TYPES -->
-### Object types
-
-Once I approached astrophotography several months ago, I searched for a tool grouping all my needs in term of image processing workflow. Much of those instruments are counterintuitive and/or platform/OS restricted (and not less important not free). 
-So I wrote this simple library including all I need at the moment for a flexible processing workflow.\
-Remember that the AstroPhotoPy library can only be used inside a Jupiter / IPython notebook. 
-I hope you'll enjoy it!
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+# Object types
 ## Image object
 The Image type is a container for a single image data and additional field for properties as:
 
@@ -64,7 +58,7 @@ class Image:
         self.norm = None
         self.dev = None 
 ```
-# Image object's methods
+## Methods
 all the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
 
 * load
@@ -87,7 +81,7 @@ It saves to a file in the given path a plot of the luminance vector, with the (o
 
 * save
 ```python 
-save(self, path)
+def save(self, path)
 ```
 It saves the image data to a image file.
 
@@ -105,13 +99,13 @@ It transforms the YUV space of the object to RGB space.
 
 * conv2d
 ```python     
-    def conv2d(self, kernel)
+def conv2d(self, kernel)
 ``` 
 It convolves the object with the given kernel
 
 * blur
 ```python     
-    def blur(self, width)
+def blur(self, width)
 ``` 
 It applies a blurring of magnitude int(width)                                                                                                  
 
@@ -123,7 +117,7 @@ It rapplies sharpness to the image
 
 * edge
 ```python 
-edge(self)                                                                                             
+def edge(self)                                                                                             
 ```
 It extract edge detection from the previous image
 
