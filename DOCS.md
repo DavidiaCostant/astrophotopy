@@ -1,4 +1,4 @@
-# AstroPhotoPy library documentation (UNDER CONSTRUCTION)
+# AstroPhotoPy 0.2.x library documentation (UNDER CONSTRUCTION)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -7,7 +7,7 @@
     <li>
       <a href="#Object types">Object types</a>
       <ul>
-        <li><a href="#Image">Image object</a></li>
+        <li><a href="#Image object">Image object</a></li>
       </ul>
       <ul>
         <li><a href="#FlexIm">FlexIm object</a></li>
