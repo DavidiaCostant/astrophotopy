@@ -52,7 +52,7 @@ The Image type is a container for a single image data and additional field for p
 
 * hist: the vector of values of luminance
 * norm: the norm(squared) of "hist" vector
-* dev: the deviation of the image's norm within a set of images
+* dev: the deviation of image's norm within a set of images
 
 ```python
 class Image:
@@ -72,19 +72,19 @@ All the methods below are destructive, i.e. they apply to the object by overwrit
 ```python
 def load(self, path, filename):
 ```
-It loads from a given filename within a path the image data.
+loads from a given filename within a path the image data.
 
 * histogram
 ```python
 def histogram(self):
 ```
-It calculates the vector of luminance and its norm then updates the respective fields.
+calculates the vector of luminance and its norm then updates the respective fields.
 
 * export_hist
 ```python        
 def export_hist(self, path, *dpi):
 ```
-It saves to a file in the given path a plot of the luminance vector, with the (optional) resolution in dpi.
+saves to a file in the given path a plot of the luminance vector, with the (optional) resolution in dpi.
 
 * save
 ```python 
@@ -96,60 +96,136 @@ It saves the image data to a image file.
 ```python 
 def yuv_decompose(self):
 ```
-It transforms the RGB space of the object to YUV space.
+transforms the RGB space of the object to YUV space.
 
 * yuv_recompose
 ```python 
 def yuv_recompose(self):
 ```
-It transforms the YUV space of the object to RGB space.
+transforms the YUV space of the object to RGB space.
 
 * conv2d
 ```python     
 def conv2d(self, kernel):
 ``` 
-It convolves the object with the given np.array(kernel)
+convolves the object with the given np.array(kernel)
 
 * blur
 ```python     
 def blur(self, width):
 ``` 
-It applies a blurring of magnitude int(width)                                                                                                  
+applies a blurring of magnitude int(width)                                                                                                  
 
 * sharpen 
 ```python   
 def sharpen(self):                                                                                          
 ```  
-It rapplies sharpness to the image
+applies sharpness to the image
 
 * edge
 ```python 
 def edge(self):                                                                                             
 ```
-It extract edge detection from the previous image
+extracts edge from the previous image
 
 * resize
 ```python 
 def resize(self, factor):
 ```
-It scales the image of the given float(factor), using a equal area method for downscaling and bicubic for upscaling.
+scales the image of the given float(factor), using a equal area method for downscaling and bicubic for upscaling.
 
 * show
 ```python
 def show(self):
 ```
-It shows the image.
+shows the image.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # FlexIm object
-The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic workflow).
+The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic workflow). 
 
 ```python
-def __init__(self, *name):
+class FlexIm:
+    def __init__(self, *name):
         self.name = ""
         if name:
             self.name = name
         self.container = []
 ```
+The self.container is a list of astrophotopy.Image objects.
+
+## Methods
+Some of the methods below can be destructive, they apply to the object by overwriting the previous information in case they do not returns any kind of object.
+
+* avg
+```python
+def avg(self): 
+```
+returns the expected value of images' norms as a floating point number.
+
+* stdev
+```python
+def stdev(self):
+```
+returns the standard deviation value of images' norms as a floating point number. 
+
+* update_devs
+```python
+def update_devs(self):
+```
+For each image in self.container it calculates and updates the respective fields' value.
+
+* load
+```python            
+def load(self, path):
+```
+given a path it loads the folder content.
+
+* save
+```python       
+def save(self, path):      
+```
+
+* depack
+```python                                                                                                  
+def depack(self):
+```
+returns a list of np.array, each of which contains image data (only).
+
+* mean
+```python
+def mean(self):#mean of the set
+```
+returns an astrophotopy.Image object containing the mean of the set.
+
+* median
+```python
+def median(self):#median of the set                                                                                     
+```
+returns an astrophotopy.Image object containing the median of the set. 
+
+* summation
+```python
+def summation(self):#summation of the set                                                                                              
+``` 
+returns an astrophotopy.Image object containing the sum of the set. 
+
+* subtraction
+```python
+def subtraction(self, image):
+```
+returns an astophotopy.FlexIm object containing the subtraction of the given astrophotopy.Image to the whole set.
+
+* find_representative
+```python
+ def find_representative(self):
+```
+returns the index of the average's closest image.
+
+* align_frames
+```python
+def align_frames(self,*precision = "normal",**transform = "affine"): 
+```
+returns a astrophotopy.FlexIm object containing the aligned frames. 
 <p align="right">(<a href="#top">back to top</a>)</p>
