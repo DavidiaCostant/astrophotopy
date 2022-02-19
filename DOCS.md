@@ -47,12 +47,23 @@ I hope you'll enjoy it!
 
 
 ### Image object
+The Image type is a container for a single image data and additional field for properties as:
 
-This library is based essentially on two image processing libraries and a front-end library: 
+* hist: the vector of values of luminance
+* norm: the norm(squared) of hist vector
+* dev: the deviation of the image's norm within a set of images
 
-* opencv
-* skimage
-* IPython 
+```python
+class Image:
+    def __init__(self, *name):
+        self.image = np.array([])
+        self.name = ""
+        if name:
+            self.name = name
+        self.hist = None
+        self.norm = None
+        self.dev = None 
+```
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
