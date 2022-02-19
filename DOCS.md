@@ -194,19 +194,19 @@ returns a list of np.array, each of which contains image data (only).
 
 * mean
 ```python
-def mean(self):#mean of the set
+def mean(self):
 ```
 returns an astrophotopy.Image object containing the mean of the set.
 
 * median
 ```python
-def median(self):#median of the set                                                                                     
+def median(self):                                                                                   
 ```
 returns an astrophotopy.Image object containing the median of the set. 
 
 * summation
 ```python
-def summation(self):#summation of the set                                                                                              
+def summation(self):                                                                                            
 ``` 
 returns an astrophotopy.Image object containing the sum of the set. 
 
