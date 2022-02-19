@@ -50,7 +50,7 @@
 # Image object
 The Image type is a container for a single image data and additional field for properties as:
 
-* hist: the vector of values of luminance
+* hist: the histogram of image's luminance as a vector
 * norm: the norm(squared) of "hist" vector
 * dev: the deviation of image's norm within a set of images
 
