@@ -10,9 +10,13 @@
         <li><a href="#Image-object">Image object</a></li>
           <ul>
             <li><a href="#Methods">Methods</a></li>
+          </ul>
       </ul>
       <ul>
         <li><a href="#FlexIm">FlexIm object</a></li>
+          <ul>
+            <li><a href="#Methods">Methods</a></li>
+          </ul>
       </ul>
       <ul>
         <li><a href="#Optics">Optics object</a></li>
@@ -25,6 +29,9 @@
       </ul>
       <ul>
         <li><a href="#Project">Project object</a></li>
+          <ul>
+            <li><a href="#Methods">Methods</a></li>
+          </ul>
       </ul>
     </li>
     <li>
@@ -40,7 +47,7 @@
 
 <!-- OBJECT TYPES -->
 # Object types
-## Image object
+# Image object
 The Image type is a container for a single image data and additional field for properties as:
 
 * hist: the vector of values of luminance
@@ -137,51 +144,6 @@ It shows the image
 
 
 
-<!--  -->
-## Getting Started
 
-This is an example of how you can setting up your project locally.
-To get a local copy up and running, follow these simple steps:
-
-### Prerequisites
-
-To install the things you need first:
-
-* numpy
-  ```sh
-  pip install numpy
-  ```
-* matplotlib
-  ```sh
-  pip install matplotlib
-* opencv
-  ```sh
-  pip install opencv-python
-  ```
-* skimage
-  ```sh
-  pip install -U scikit-image
-  ```
-* IPython
-  ```sh
-  pip install ipython
-  ```
-### Installation
-
-After installing dependencies, you can install the library with pip:
-
-   ```sh
-   pip install astrophotopy
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
-```
- 
-_For a better description of the above (and others) astrophotopy methods, please refer to the [Documentation](https://github.com/DavidiaCostant/astrophotopy/blob/main/DOCS.md)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
