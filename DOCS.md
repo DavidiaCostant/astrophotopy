@@ -19,18 +19,18 @@
           </ul>
       </ul>
       <ul>
-        <li><a href="#Optics">Optics object</a></li>
+        <li><a href="#Optics-object">Optics object</a></li>
       </ul>
       <ul>
-        <li><a href="#Sensor">Sensor object</a></li>
+        <li><a href="#Sensor-object">Sensor object</a></li>
       </ul>
       <ul>
-        <li><a href="#Observation_site">Observation_site object</a></li>
+        <li><a href="#Observation_site-object">Observation_site object</a></li>
       </ul>
       <ul>
-        <li><a href="#Project">Project object</a></li>
+        <li><a href="#Project-object">Project object</a></li>
           <ul>
-            <li><a href="#Methods">Methods</a></li>
+            <li><a href="#Project-methods">Methods</a></li>
           </ul>
       </ul>
     </li>
@@ -65,7 +65,7 @@ class Image:
         self.norm = None
         self.dev = None 
 ```
-## Image Methods
+## Image methods
 All the methods below are destructive, i.e. they apply to the object by overwriting the previous information.
 
 * load
@@ -90,7 +90,7 @@ saves to a file in the given path a plot of the luminance vector, resolution in 
 ```python 
 def save(self, path):
 ```
-It saves the image data to a image file.
+saves the image data to a image file.
 
 * cos_phi
 ```python 
@@ -161,7 +161,7 @@ class FlexIm:
 ```
 The self.container is a list of astrophotopy.Image objects.
 
-## FlexIm Methods
+## FlexIm methods
 
 * avg
 ```python
@@ -232,5 +232,29 @@ returns the index of the average's closest image.
 ```python
 def align_frames(self,*precision = "normal"[optional],**transform = "affine"[optional]): 
 ```
-returns a astrophotopy.FlexIm object containing the aligned frames. 
+returns a astrophotopy.FlexIm object containing the aligned frames.
+
+# Optics object
+The Optics object contains all the relevant information about the optics:
+* diameter of the aperture in mm
+* focal lenght of the optical system in mm (self.f_len)
+* magnification factor of additional lens (self.lens > 1 for Barlow lenses and self.lens < 1 for focal reducers)
+* focal length of the eyepiece/camera in mm (self.f_len_ep)
+* 
+```python
+class Optics:
+    def __init__(self, **kwargs):
+        for arg in kwargs:
+            if arg=='model':
+                self.model = kwargs[arg]
+            if arg=='diameter':
+                self.diameter = kwargs[arg]
+            if arg=='f_len':
+                self.focal_length = kwargs[arg]
+            if arg=='lens': 
+                self.lens = kwargs[arg]
+            if arg=='f_len_ep': 
+                self.eyepiece = kwargs[arg]
+```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
