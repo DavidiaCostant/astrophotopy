@@ -114,7 +114,7 @@ transforms the YUV space of the object to RGB space.
 ```python     
 def conv2d(self, kernel):
 ``` 
-convolves the object with the given np.array(kernel)
+convolves the object with the given numpy.array(kernel)
 
 * blur
 ```python     
