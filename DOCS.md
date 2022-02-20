@@ -279,7 +279,7 @@ class Sensor:
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-# Observation_site object
+# Observation_Site object
 The Observation_site object contains the relevant information about the site where the images was taken.
 * air temperature is a floating point number and will be used for categorizing master dark frames (self.air_temp)
 * latitude of the observation site, in degree but arcminutes must be converted to decimal (self.latitude)
@@ -300,4 +300,101 @@ class Observation_Site:
             if arg=='fwhm':
                 self.fwhm= kwargs[arg]
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+# Project object
+This is the main wrapper object for the library, it includes methods for the general purpose of the library itself and for minimal end-user's usage effort.
+
+```python
+class Project:
+    def __init__(self, **kwargs):
+        self.object_name = kwargs['subject']
+        self.path = kwargs['path']
+        self.telescope = None
+        self.observation_site = None
+        for arg in kwargs:
+            if arg=='subject':
+                self.object_name = kwargs[arg]
+            if arg=='path':
+                self.path = kwargs[arg]
+            if arg=='DF_path':
+                self.DF_path = kwargs[arg]
+            else:
+                self.DF_path = self.path+"/"+self.object_name+"/DF"
+            if arg=='FF_path':
+                self.FF_path = kwargs[arg]
+            else:
+                self.FF_path = self.path+"/"+self.object_name+"/FF"
+            if arg=='tot_exposure':
+                self.total_exposure = kwargs[arg]
+            if arg=='frame_exposure':
+                self.frame_exposure = kwargs[arg] 
+            if arg=='optics':
+                self.optics = arg
+            if arg=='sensor':
+                self.sensor = arg 
+            if arg=='observation_site':
+                self.observation_site = arg
+        
+        self.frames = FlexIm("Rough")
+        self.dark_frames = FlexIm("DF")
+        self.flat_frames = FlexIm("FF")
+```
+# Project method
+
+* load
+```python    
+def load(self):
+```
+loads all the files from the respective folders.
+
+* display_HTML
+```python 
+def display_HTML(self, html_data):
+```
+displays a table of html formatted data. html_data is a list of rows, each row is an array containg cells of html formatted data. The function is used as as sub-method for visualizing data, but it can be accessed by the user if needed.
+
+* show_select_and_drop
+```python 
+def show_select_and_drop(self, *frame_type[optional], **drop_toll = 1[optional]):
+```
+shows the set first, then it selects the images out of a tolerance (standard deviation).
+
+* align_frames
+```python
+def align_frames(self,*precision = "normal"[optional],**transform = "affine"[optional]): 
+```
+aligns frames within the set.
+
+* master_frame
+```python
+def master_frame(self,*frame_type[optional]):
+```
+creates the master frame of the given frame type.
+
+* calc_super_res_number
+```python           
+def calc_super_res_number(self, magnification):
+```
+is a routine for the calculation of the minimal frames number required for the magnification required (probabilistic upscaling).
+
+* subtract_master_dark_and_flat
+```python   
+def subtract_master_dark_and_flat(self):
+```
+cleans up the set subtracting the master dark and flat frames.
+
+* create_integration_set
+```python 
+def create_integration_sets(self,*n_passed):
+```
+creates the integration sets based on the total required exposure.
+
+* integrate_over_sets
+```python 
+def integrate_over_sets(self):
+```
+for each integration set previously created it integrates the frames within a set to produce a pre master picture.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
