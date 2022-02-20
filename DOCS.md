@@ -196,7 +196,7 @@ def save(self, path):
 ```python                                                                                                  
 def depack(self):
 ```
-returns a list of np.array, each of which contains image data (only).
+returns a list of numpy.array, each of which contains image data (only).
 
 * mean
 ```python
