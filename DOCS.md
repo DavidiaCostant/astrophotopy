@@ -234,13 +234,15 @@ def align_frames(self,*precision = "normal"[optional],**transform = "affine"[opt
 ```
 returns a astrophotopy.FlexIm object containing the aligned frames.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 # Optics object
 The Optics object contains all the relevant information about the optics:
 * diameter of the aperture in mm
 * focal lenght of the optical system in mm (self.f_len)
 * magnification factor of additional lens (self.lens > 1 for Barlow lenses and self.lens < 1 for focal reducers)
 * focal length of the eyepiece/camera in mm (self.f_len_ep)
-* 
+
 ```python
 class Optics:
     def __init__(self, **kwargs):
@@ -257,4 +259,45 @@ class Optics:
                 self.eyepiece = kwargs[arg]
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+# Sensor object
+The Sensor object contains information as:
+* pixel dimension in micrometer (self.px_dim)
+* sensor diagonal in mm (self.sensor_diagonal)
+
+```python
+class Sensor:
+    def __init__(self, **kwargs):
+        for arg in kwargs:
+            if arg=='model':
+                self.model = kwargs[arg]
+            if arg=='px_dim': #dimension of pixel micrometer
+                self.px_dim = kwargs[arg]
+            if arg=='sens_diag': #ccd diagonal in mm
+                self.sensor_diagonal = kwargs[arg]
+```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+# Observation_site object
+The Observation_site object contains the relevant information about the site where the images was taken.
+* air temperature is a floating point number and will be used for categorizing master dark frames (self.air_temp)
+* latitude of the observation site, in degree but arcminutes must be converted to decimal (self.latitude)
+* full width at half maximum is a measure of seeing [arcseconds]
+
+```python
+class Observation_Site: 
+    def __init__(self, **kwargs):
+        for arg in kwargs:
+            if arg=='location_name':
+                self.location_name = kwargs[arg]
+            if arg=='altitude':
+                self.altitude = kwargs[arg]
+            if arg=='latitude':
+                self.latitude = kwargs[arg]
+            if arg=='air_temp':
+                self.air_temp = kwargs[arg]
+            if arg=='fwhm':
+                self.fwhm= kwargs[arg]
+```
 <p align="right">(<a href="#top">back to top</a>)</p>
