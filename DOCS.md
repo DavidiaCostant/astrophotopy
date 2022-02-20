@@ -149,7 +149,7 @@ shows the image.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # FlexIm object
-The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic workflow). 
+The FlexIm object is a multi-image container. The purpose of this object is to group within it a homogeneous set of images (i.e. all the dark frames taken or the red filter frames for a monochromatic processing workflow). 
 
 ```python
 class FlexIm:
