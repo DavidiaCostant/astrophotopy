@@ -57,7 +57,7 @@ The Image type is a container for a single image data and additional field for p
 ```python
 class Image:
     def __init__(self, *name):
-        self.image = np.array([])
+        self.image = numpy.array([])
         self.name = ""
         if name:
             self.name = name
@@ -91,6 +91,12 @@ saves to a file in the given path a plot of the luminance vector, with the (opti
 def save(self, path):
 ```
 It saves the image data to a image file.
+
+* cos_phi
+```python 
+def cos_phi(self, image):
+```
+returns the cosine between the self.hist and the passed astrophotopy.Image.hist vectors. 
 
 * yuv_decompose
 ```python 
