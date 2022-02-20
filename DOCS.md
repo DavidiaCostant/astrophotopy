@@ -56,7 +56,7 @@ The Image type is a container for a single image data and additional field for p
 
 ```python
 class Image:
-    def __init__(self, *name):
+    def __init__(self, *name[optional]):
         self.image = numpy.array([])
         self.name = ""
         if name:
@@ -82,9 +82,9 @@ calculates the vector of luminance and its norm then updates the respective fiel
 
 * export_hist
 ```python        
-def export_hist(self, path, *dpi):
+def export_hist(self, path, *dpi[optional]):
 ```
-saves to a file in the given path a plot of the luminance vector, with the (optional) resolution in dpi.
+saves to a file in the given path a plot of the luminance vector, resolution in dpi.
 
 * save
 ```python 
@@ -153,7 +153,7 @@ The FlexIm object is a multi-image container. The purpose of this object is to g
 
 ```python
 class FlexIm:
-    def __init__(self, *name):
+    def __init__(self, *name[optional]):
         self.name = ""
         if name:
             self.name = name
@@ -230,7 +230,7 @@ returns the index of the average's closest image.
 
 * align_frames
 ```python
-def align_frames(self,*precision = "normal",**transform = "affine"): 
+def align_frames(self,*precision = "normal"[optional],**transform = "affine"[optional]): 
 ```
 returns a astrophotopy.FlexIm object containing the aligned frames. 
 <p align="right">(<a href="#top">back to top</a>)</p>
