@@ -341,7 +341,7 @@ class Project:
         self.dark_frames = FlexIm("DF")
         self.flat_frames = FlexIm("FF")
 ```
-# Project method
+## Project methods
 
 * load
 ```python    
