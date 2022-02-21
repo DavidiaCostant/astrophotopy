@@ -120,7 +120,7 @@ After installing dependencies, you can install the library with pip:
 
 <!-- USAGE EXAMPLES -->
 ## Simple usage
-1. Import the library, you can create a setup (optics + sensor) and an observation site first then you have to create your project:
+1. Import the library. You can create a setup (optics + sensor) and an observation site first, then you have to create your project:
  ```python
    import astrophotopy as ap 
    my_optics = ap.Optics(model="RC 8", diameter = 203, f_len = 1604, f_len_ep = 22)
