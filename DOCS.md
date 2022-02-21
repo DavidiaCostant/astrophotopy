@@ -355,6 +355,12 @@ def display_HTML(self, html_data):
 ```
 displays a table of html formatted data. html_data is a list of rows, each row is an array containg cells of html formatted data. The function is used as as sub-method for visualizing data, but it can be accessed by the user if needed.
 
+* debayering
+```python 
+def debayering(self):
+```
+performs debayering of frames.
+
 * show_select_and_drop
 ```python 
 def show_select_and_drop(self, *frame_type[optional], **drop_toll = 1[optional]):
