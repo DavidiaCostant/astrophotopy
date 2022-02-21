@@ -70,8 +70,6 @@ This library is based essentially on two image processing libraries and a front-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -117,10 +115,10 @@ After installing dependencies, you can install the library with pip:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Simple usage
 1. Open your Jupyter / IPython notebook and import the AstroPhotoPy library. You can create a setup (optics + sensor) and an observation site first, then you have to create your project:
+2. 
  ```python
    import astrophotopy as ap 
    my_optics = ap.Optics(model="RC 8", diameter = 203, f_len = 1604, f_len_ep = 22)
@@ -129,9 +127,10 @@ After installing dependencies, you can install the library with pip:
    crab = ap.Project(subject="M1", path="My_folder", optics = my_optics, sensor = my_sensor, observation_site = my_site)
 
 ```
-2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them (only .jpg, .png, .bmp, .tiff and .fits can be imported) and then perform set cleaning by means of master dark and flat frame subtraction:
+2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them (only .jpg, .png, .bmp, .tiff and .fits can be imported), possibly debayer (in case of color camera) and then perform set cleaning by means of master dark and flat frame subtraction:
 ```python
    crab.load()
+   crab.debayering()
    crab.subtract_master_dark_and_flat()
 
 ```
