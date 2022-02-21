@@ -129,7 +129,7 @@ After installing dependencies, you can install the library with pip:
    crab = ap.Project(subject="M1", path="My_folder", optics = my_optics, sensor = my_sensor, observation_site = my_site)
 
 ```
-2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them (only .jpg, .png, .bmp, .tiff e .fits can be imported) and then perform set cleaning by means of master dark and flat frame subtraction:
+2. After copying your images (rough, dark and flat frames) in their respective folders, you have to load them (only .jpg, .png, .bmp, .tiff and .fits can be imported) and then perform set cleaning by means of master dark and flat frame subtraction:
 ```python
    crab.load()
    crab.subtract_master_dark_and_flat()
