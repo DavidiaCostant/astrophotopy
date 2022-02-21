@@ -89,6 +89,11 @@ To install the things you need first:
 * matplotlib
   ```sh
   pip install matplotlib
+  
+* pyfits
+  ```sh
+  pip install pyfits
+  ```
 * opencv
   ```sh
   pip install opencv-python
@@ -154,7 +159,7 @@ _For a better description of the above (and others) astrophotopy methods, please
 
 - [x] Add Changelog
 - [ ] Write documentation
-- [ ] Add .fits and .ser file import/export
+- [ ] Add .ser file import/export
 - [ ] Add monochromatic camera workflow
 - [ ] Add additional examples
 
