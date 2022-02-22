@@ -96,7 +96,7 @@ saves the image data to a image file.
 ```python 
 def cos_phi(self, image):
 ```
-returns the cosine between the self.hist and the passed astrophotopy.Image.hist vectors. Cos(phi) is a measure of the grade of similarity between two image, and can be used in alternative to the statistical approach (standard deviation).
+returns the cosine between the self.hist and the passed astrophotopy.Image.hist vectors. Cos(phi) is a measure of the degree of similarity between two image, and can be used in alternative to the statistical approach (standard deviation).
 
 * yuv_decompose
 ```python 
