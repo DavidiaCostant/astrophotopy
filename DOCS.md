@@ -232,7 +232,7 @@ returns the index of the average's closest image.
 ```python
 def align_frames(self,*precision = "normal"[optional],**transform = "affine"[optional]): 
 ```
-returns a astrophotopy.FlexIm object containing the aligned frames.
+returns a astrophotopy.FlexIm object containing the aligned frames. Optional parameters are precision (low, normal[default], high, very high) and trasform type (euclidean, affine[default], homography). 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
