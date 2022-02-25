@@ -152,7 +152,7 @@ _For a better description of the above (and others) astrophotopy methods, please
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CHANGELOG -->
-## The Changelog
+## Changelog
 ### 2022 feb 25 - v0.2.2 
  
 * added multiprocessing support for speedup of cpu intensive tasks
