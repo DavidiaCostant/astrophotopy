@@ -41,6 +41,7 @@ Astrophotography processing tools
       </ul>
     </li>
     <li><a href="#Simple usage">Usage</a></li>
+    <li><a href="#Changelog">Changelog</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -150,18 +151,24 @@ _For a better description of the above (and others) astrophotopy methods, please
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- CHANGELOG -->
+## The Changelog
+### 2022 feb 25 - v0.2.2 
+ 
+* added multiprocessing support for speedup of cpu intensive tasks
+* added Changelog
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Changelog
-- [ ] Add multithreading/multiprocessing
+- [x] Add Changelog
+- [x] Add multiprocessing
 - [ ] Add monochromatic camera workflow
-- [ ] Write documentation
+- [ ] Write exhaustive documentation
 - [ ] Add .ser file import/export
 - [ ] CUDA/OpenCL aligning code implementation
-- [ ] Add additional examples
 
 
 See the [open issues](https://github.com/DavidiaCostant/astrophotopy/issues) for a full list of proposed features (and known issues).
