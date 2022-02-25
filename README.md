@@ -136,7 +136,7 @@ After installing dependencies, you can install the library with pip:
 3. Now perform an automatic selection of the best images (i.e. dropping those frames in which a damn Starlink passed) and then align the retained frames:
 ```python
    crab.show_select_and_drop()
-   crab.align_frames("normal", transform = "euclidean")
+   crab.align_frames()
 
 ```
 4. After prior calculation of total exposure and creation of integration sets, sets' integration can be performed:
