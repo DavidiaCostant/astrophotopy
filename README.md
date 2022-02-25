@@ -133,7 +133,7 @@ After installing dependencies, you can install the library with pip:
    crab.subtract_master_dark_and_flat()
 
 ```
-3. Now perform an automatic selection of the best images and then align the retained frames:
+3. Now perform an automatic selection of the best images (i.e. dropping those frames in which a damn Starlink passed) and then align the retained frames:
 ```python
    crab.show_select_and_drop()
    crab.align_frames("normal", transform = "euclidean")
