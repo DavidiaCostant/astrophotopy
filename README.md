@@ -156,10 +156,11 @@ _For a better description of the above (and others) astrophotopy methods, please
 ## Roadmap
 
 - [ ] Add Changelog
+- [ ] Add multithreading/multiprocessing
 - [ ] Add monochromatic camera workflow
 - [ ] Write documentation
 - [ ] Add .ser file import/export
-- [ ] CUDA/OpenCL aligning method implementation
+- [ ] CUDA/OpenCL aligning code implementation
 - [ ] Add additional examples
 
 
