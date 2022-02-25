@@ -1,5 +1,5 @@
 # AstroPhotoPy
-Astrophotography pre and post processing tools
+Astrophotography processing tools
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
